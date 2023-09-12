@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1694540163888,
+      "tag": "0000_sparkling_leo",
+      "breakpoints": true
+    }
+  ]
+}

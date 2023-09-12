@@ -1,7 +1,6 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
-import { getCount } from "../utils/db.ts";
 
 interface HomeProps {
   start: number;
@@ -9,7 +8,7 @@ interface HomeProps {
 
 export const handler: Handlers<HomeProps> = {
   async GET(_req, ctx) {
-    let start = await getCount();
+    let start = 0
     if (start === null) start = 3;
     return ctx.render({ start });
   },

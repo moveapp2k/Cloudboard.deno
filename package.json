@@ -1,0 +1,31 @@
+{
+  "name": "cloudboard.works",
+  "version": "1.0.0",
+  "description": "This application is a starter template that uses [Fresh](https://fresh.deno.dev/) and [Deno KV](https://deno.com/kv) for persistence. [Check out a live demo here!](https://fresh-kv-example.deno.dev/) Learn more about [building web applications with Fresh](https://fresh.deno.dev/docs/introduction), and about interacting with [Deno KV to store data](https://deno.com/manual/runtime/kv).",
+  "main": "index.js",
+  "scripts": {
+    "cloudboard-migrate": "drizzle-kit generate:pg --schema=./db/cloudboard.db.ts",
+    "cloudboard-push": "drizzle-kit push:pg",
+    "cloudboard-db-publish": "drizzle-kit generate:pg --schema=./db/cloudboard.db.ts && drizzle-kit push:pg",
+    "supabase-gen-types": "supabase gen types typescript --project-id vzojmryleekrfqmvcwur --schema public > src/supabase-types.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moveapp2k/cloudboard.works.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moveapp2k/cloudboard.works/issues"
+  },
+  "homepage": "https://github.com/moveapp2k/cloudboard.works#readme",
+  "devDependencies": {
+    "drizzle-kit": "^0.19.13",
+    "supabase": "^1.93.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
+    "postgres": "^3.3.5"
+  }
+}
